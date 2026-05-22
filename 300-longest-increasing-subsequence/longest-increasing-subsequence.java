@@ -3,9 +3,10 @@ class Solution {
 
         int res[]=new int[nums.length];
 
-        for (int i = 0; i < nums.length; i++) {
-            res[i] = 1;
-        }
+        // for (int i = 0; i < nums.length; i++) {
+        //     res[i] = 1;
+        // }
+        Arrays.fill(res,1);
         for(int i=0;i<nums.length;i++)
             for(int j=0;j<i;j++){
                 if(nums[j]<nums[i]){
@@ -14,6 +15,7 @@ class Solution {
                     }
                 }
             }
+        
             int max=0;
             for(int k=0;k<res.length;k++){
                 max=Math.max(max,res[k]);
