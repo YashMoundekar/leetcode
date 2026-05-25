@@ -15,7 +15,7 @@ class Solution {
             }
         }
 
-        return (U==D&&L==R)?true:false;
+        return U==D && L==R;
         
     }
 }
