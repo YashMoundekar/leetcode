@@ -8,20 +8,30 @@ class Solution {
         }
         int count=0;
         for(char key:hp.keySet()){
-             hp.put(key, hp.get(key) - 1);
+            hp.put(key, hp.get(key) - 1);
 
-            HashSet<Integer> set = new HashSet<>();
+            int freq = 0;
+            boolean same = true;
 
-            for (int freq : hp.values()) {
-                if (freq > 0) {
-                    set.add(freq);
+            for (int val : hp.values()) {
+
+                if (val == 0) {
+                    continue;
+                }
+
+                if (freq == 0) {
+                    freq = val;
+                } else if (freq != val) {
+                    same = false;
+                    break;
                 }
             }
 
-            if (set.size() == 1) {
+            hp.put(key, hp.get(key) + 1);
+
+            if (same) {
                 return true;
             }
-            hp.put(key, hp.get(key) + 1);
         }
         return false;
     }
