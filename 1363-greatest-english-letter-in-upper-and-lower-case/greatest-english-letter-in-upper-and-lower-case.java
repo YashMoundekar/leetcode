@@ -1,7 +1,7 @@
 class Solution {
     public String greatestLetter(String s) {
 
-        String str = "";
+        
         char ch[] = s.toCharArray();
 
         for (char c = 'Z'; c >= 'A'; c--) {
@@ -20,7 +20,7 @@ class Solution {
             }
 
             if(small && capital){
-                return str+c;
+                return ""+c;
             }
         }
         return "";
