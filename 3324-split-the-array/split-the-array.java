@@ -1,10 +1,13 @@
 class Solution {
     public boolean isPossibleToSplit(int[] nums) {
 
-        Arrays.sort(nums);
+        int fre[]=new int[101];
 
-        for (int i = 2; i < nums.length; i++) {
-            if (nums[i] == nums[i - 1] && nums[i] == nums[i - 2]) {
+        for( int i:nums){
+            fre[i]++;
+        }
+        for(int i=0;i<fre.length;i++){
+            if(fre[i]>2){
                 return false;
             }
         }
