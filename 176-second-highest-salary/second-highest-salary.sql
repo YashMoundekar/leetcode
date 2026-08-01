@@ -1,0 +1,3 @@
+# Write your MySQL query statement below
+-- SELECT SALARY AS SecondHighestSalary FROM EMPLOYEE ORDER BY SALARY DESC LIMIT 1,1;
+SELECT MAX(SALARY)AS SecondHighestSalary FROM EMPLOYEE WHERE Salary<(SELECT MAX(SALARY)AS SecondHighestSalary FROM EMPLOYEE);
