@@ -7,6 +7,7 @@ class Solution {
         for(int num:nums1){
             if(num%2==0){
                 even=true;
+                break;
             }else{
                 odd=true;
             }
