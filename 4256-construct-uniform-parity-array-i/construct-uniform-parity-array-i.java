@@ -10,6 +10,7 @@ class Solution {
                 break;
             }else{
                 odd=true;
+                break;
             }
         }
 
