@@ -13,6 +13,13 @@ class Solution {
        
         //return count;
 
-        return (n >= 1000) ? (n - 999) : 0;
+        //return (n >= 1000) ? (n - 999) : 0;
+
+        for(int i=1000;i<=n;i++){
+            
+                count++;
+            
+        }
+        return count;
     }
 }
